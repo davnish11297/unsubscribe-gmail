@@ -7,7 +7,7 @@ function main() {
 
     var message = thread.getMessages()[0];
     var value = message.getRawContent()
-                       .match(/^List-Unsubscribe: ((.|\r\n\s)+)\r\n/m)[1];
+                       .match(/^List-Unsubscribe: ((.|?n!r\n\s)+)\r\n/m)[1];
 
     if (value) {
       var url = value.match(/<(https?:\/\/[^>]+)>/)[1];
